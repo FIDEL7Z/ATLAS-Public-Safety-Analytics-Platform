@@ -1,0 +1,25 @@
+# Raw and processed data (large files, not versioned)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Environment
+.env
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Power BI — o .pbix é binário e pode ficar grande com o modelo importado
+# (fact table de 5,29M linhas); o que importa para o repositório é o
+# tema/medidas/DDL versionados em texto (powerbi/*.json, powerbi/*.dax, sql/).
+powerbi/*.pbix
+*.pbix.bak

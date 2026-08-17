@@ -1,0 +1,254 @@
+// ATLAS — Public Safety Analytics Platform
+// Medidas DAX, organizadas em 6 grupos (Fase 3).
+// Criar cada medida em 'Fato Indicadores' via Nova Medida, usando o nome
+// como título e o texto após "=" como fórmula. Ordem de criação importa
+// dentro de cada grupo (medidas depois reusam medidas de cima via [Nome]).
+//
+// Convenção: nenhuma medida soma `valor` sem estar implicitamente filtrada
+// por um único indicador/família — ver "Total Valor (Seguro)" no Grupo 01,
+// que é a medida "trava" recomendada para qualquer visual de KPI genérico.
+
+// ============================================================
+// 01 — CORE METRICS
+// ============================================================
+
+Total Valor = SUM('Fato Indicadores'[valor])
+
+Contagem Registros = COUNTROWS('Fato Indicadores')
+
+Unidades Distintas em Contexto = DISTINCTCOUNT('Dim Indicador'[unidade])
+
+Total Valor (Seguro) =
+IF(
+    [Unidades Distintas em Contexto] > 1,
+    BLANK(),
+    [Total Valor]
+)
+// Retorna BLANK() se o contexto de filtro atual mistura mais de uma unidade
+// (ex.: um card sem filtro de indicador, somando "pessoas" + "kg" + "ocorrências").
+// Use esta medida — não [Total Valor] — em qualquer card que não tenha a
+// garantia visual de um único indicador selecionado.
+
+Total Vítimas = CALCULATE([Total Valor], 'Dim Indicador'[familia_medida] = "vitima")
+
+Total Ocorrências e Ações = CALCULATE([Total Valor], 'Dim Indicador'[familia_medida] = "contagem")
+
+Total Peso Apreendido (kg) = CALCULATE([Total Valor], 'Dim Indicador'[familia_medida] = "peso")
+
+Indicador Selecionado =
+IF(
+    HASONEVALUE('Dim Indicador'[evento]),
+    SELECTEDVALUE('Dim Indicador'[evento]),
+    "Vários indicadores"
+)
+
+Unidade Selecionada =
+IF(
+    [Unidades Distintas em Contexto] = 1,
+    SELECTEDVALUE('Dim Indicador'[unidade]),
+    "unidades mistas — não somar"
+)
+
+// ============================================================
+// 02 — TEMPORAL
+// (requer 'Dim Tempo' marcada como Date Table, coluna data_referencia)
+// ============================================================
+
+Valor Mês Anterior =
+CALCULATE(
+    [Total Valor],
+    DATEADD('Dim Tempo'[data_referencia], -1, MONTH)
+)
+
+Variação Absoluta MoM = [Total Valor] - [Valor Mês Anterior]
+
+Variação % MoM = DIVIDE([Variação Absoluta MoM], [Valor Mês Anterior])
+
+Valor Mesmo Mês Ano Anterior =
+CALCULATE(
+    [Total Valor],
+    SAMEPERIODLASTYEAR('Dim Tempo'[data_referencia])
+)
+
+Variação % YoY (mesmo mês) =
+DIVIDE(
+    [Total Valor] - [Valor Mesmo Mês Ano Anterior],
+    [Valor Mesmo Mês Ano Anterior]
+)
+
+Média Móvel 3M =
+AVERAGEX(
+    DATESINPERIOD('Dim Tempo'[data_referencia], MAX('Dim Tempo'[data_referencia]), -3, MONTH),
+    [Total Valor]
+)
+
+Mês Limite Comparável =
+VAR MesMaximoAnoParcial =
+    CALCULATE(MAX('Dim Tempo'[mes]), ALL('Dim Tempo'), 'Dim Tempo'[is_partial_year] = TRUE)
+RETURN
+    COALESCE(MesMaximoAnoParcial, 12)
+// Não fixo em "6" nem em "2026": se um ano futuro também vier parcial, o
+// limite se ajusta ao mês mais restritivo automaticamente (mesma lógica de
+// analytics.vw_periodo_comparavel na Fase 2).
+
+Total Período Comparável =
+CALCULATE(
+    [Total Valor],
+    FILTER(ALL('Dim Tempo'), 'Dim Tempo'[mes] <= [Mês Limite Comparável])
+)
+// Use esta medida (não [Total Valor]) em qualquer visual que compare anos
+// inteiros lado a lado — nunca compara Jan-Dez de um ano contra Jan-Jun de
+// outro.
+
+Rótulo Ano Selecionado =
+VAR AnoAtual = SELECTEDVALUE('Dim Tempo'[ano])
+VAR LinhasParciais =
+    CALCULATE(
+        COUNTROWS('Dim Tempo'),
+        ALL('Dim Tempo'),
+        'Dim Tempo'[ano] = AnoAtual,
+        'Dim Tempo'[is_partial_year] = TRUE
+    )
+VAR UltimoMesNum =
+    CALCULATE(MAX('Dim Tempo'[mes]), ALL('Dim Tempo'), 'Dim Tempo'[ano] = AnoAtual)
+RETURN
+    IF(
+        NOT ISBLANK(AnoAtual) && LinhasParciais > 0,
+        "DADOS PARCIAIS — JAN a " & FORMAT(DATE(2000, UltimoMesNum, 1), "MMM") & "/" & AnoAtual,
+        IF(NOT ISBLANK(AnoAtual), FORMAT(AnoAtual, "General Number"), "Vários anos")
+    )
+// Uso: um card de texto no topo da página Temporal Analysis e da Executive
+// Overview, sempre visível quando o slicer de ano estiver em um único valor.
+
+// ============================================================
+// 03 — RANKING
+// (RANKX + ALLSELECTED: recalcula a cada clique, respeita slicers ativos)
+// ============================================================
+
+Ranking UF =
+RANKX(ALLSELECTED('Dim Localidade'[uf]), CALCULATE([Total Valor]), , DESC, DENSE)
+
+Ranking Município =
+RANKX(ALLSELECTED('Dim Localidade'[municipio]), CALCULATE([Total Valor]), , DESC, DENSE)
+
+Ranking Região =
+RANKX(ALLSELECTED('Dim Localidade'[regiao]), CALCULATE([Total Valor]), , DESC, DENSE)
+
+Ranking Indicador (no grupo) =
+RANKX(ALLSELECTED('Dim Indicador'[evento]), CALCULATE([Total Valor]), , DESC, DENSE)
+// ALLSELECTED aqui já respeita um slicer de grupo_semantico aplicado
+// externamente — se o usuário filtrou "Vítimas", o ranking é só entre
+// indicadores de Vítimas, sem precisar de lógica extra.
+
+Ranking Abrangência =
+RANKX(ALLSELECTED('Dim Abrangência'[abrangencia]), CALCULATE([Total Valor]), , DESC, DENSE)
+
+// ============================================================
+// 04 — PARTICIPATION
+// ============================================================
+
+Participação % UF =
+DIVIDE([Total Valor], CALCULATE([Total Valor], ALLSELECTED('Dim Localidade')))
+
+Participação % Município (na UF) =
+DIVIDE([Total Valor], CALCULATE([Total Valor], ALLSELECTED('Dim Localidade'[municipio])))
+
+Participação % do Indicador na Família =
+VAR FamiliaAtual = SELECTEDVALUE('Dim Indicador'[familia_medida])
+RETURN
+    DIVIDE(
+        [Total Valor],
+        CALCULATE(
+            [Total Valor],
+            ALLSELECTED('Dim Indicador'),
+            'Dim Indicador'[familia_medida] = FamiliaAtual
+        )
+    )
+// Nunca divide pelo total geral (que misturaria família) — sempre pelo
+// total DENTRO da mesma familia_medida do indicador em contexto.
+
+Participação % Sexo (no indicador) =
+DIVIDE([Total Valor], CALCULATE([Total Valor], ALLSELECTED('Dim Sexo')))
+
+// ============================================================
+// 05 — STATISTICAL
+// ============================================================
+
+Mediana Peso (kg) =
+CALCULATE(MEDIANX('Fato Indicadores', 'Fato Indicadores'[valor]), 'Dim Indicador'[familia_medida] = "peso")
+
+P90 Peso (kg) =
+CALCULATE(PERCENTILEX.INC('Fato Indicadores', 'Fato Indicadores'[valor], 0.9), 'Dim Indicador'[familia_medida] = "peso")
+
+P95 Peso (kg) =
+CALCULATE(PERCENTILEX.INC('Fato Indicadores', 'Fato Indicadores'[valor], 0.95), 'Dim Indicador'[familia_medida] = "peso")
+
+P99 Peso (kg) =
+CALCULATE(PERCENTILEX.INC('Fato Indicadores', 'Fato Indicadores'[valor], 0.99), 'Dim Indicador'[familia_medida] = "peso")
+
+Máximo Peso (kg) =
+CALCULATE(MAX('Fato Indicadores'[valor]), 'Dim Indicador'[familia_medida] = "peso")
+
+Média COM Outliers (Peso) =
+CALCULATE(AVERAGE('Fato Indicadores'[valor]), 'Dim Indicador'[familia_medida] = "peso")
+
+Média SEM Top 1% (Peso) =
+VAR LimiteP99 = [P99 Peso (kg)]
+RETURN
+    CALCULATE(
+        AVERAGE('Fato Indicadores'[valor]),
+        'Dim Indicador'[familia_medida] = "peso",
+        'Fato Indicadores'[valor] <= LimiteP99
+    )
+// Filtra só PARA ESTE CÁLCULO — não remove nada da base importada. Existe
+// para mostrar o efeito do outlier lado a lado com a média real, nunca para
+// substituir a média real em nenhum outro visual.
+
+Impacto % dos Outliers na Média =
+DIVIDE([Média COM Outliers (Peso)] - [Média SEM Top 1% (Peso)], [Média SEM Top 1% (Peso)])
+
+Média Histórica Mensal =
+AVERAGEX(ALL('Dim Tempo'), CALCULATE([Total Valor]))
+// Ignora QUALQUER filtro de tempo em contexto (ALL na tabela inteira, não só
+// na coluna de data) — mantém o filtro de indicador. É a "média de todos os
+// meses" do indicador selecionado, usada como baseline do z-score.
+
+Desvio Padrão Histórico Mensal =
+STDEVX.P(ALL('Dim Tempo'), CALCULATE([Total Valor]))
+
+Z-Score =
+DIVIDE([Total Valor] - [Média Histórica Mensal], [Desvio Padrão Histórico Mensal])
+// |Z-Score| > 2 = candidato a mês atípico; > 3 = forte candidato. Nunca
+// rotular automaticamente como "problema" — ver docs/POWERBI_PAGES.md,
+// página Analytical Radar, sobre linguagem estatística.
+
+// ============================================================
+// 06 — DATA QUALITY
+// (medidas sobre as tabelas satélite 'Qualidade Não Informado' / 'Qualidade Resumo')
+// ============================================================
+
+Total Linhas RAW-Staging = SUM('Qualidade Resumo'[linhas_raw_staging])
+Total Linhas Fato = SUM('Qualidade Resumo'[linhas_fact])
+Total Indicadores = SUM('Qualidade Resumo'[n_indicadores])
+Total UFs = SUM('Qualidade Resumo'[n_ufs])
+Total Municípios = SUM('Qualidade Resumo'[n_municipios_distintos])
+Meses em Anos Parciais = SUM('Qualidade Resumo'[meses_em_anos_parciais])
+
+% Não Informado (indicador selecionado) =
+DIVIDE(
+    SUM('Qualidade Não Informado'[valores_nao_informados]),
+    SUM('Qualidade Não Informado'[valores_aplicaveis])
+)
+
+Status Qualidade =
+VAR Pct = [% Não Informado (indicador selecionado)]
+RETURN
+    SWITCH(
+        TRUE(),
+        ISBLANK(Pct), "Sem dados",
+        Pct <= 0.10, "Bom",
+        Pct <= 0.25, "Atenção",
+        "Sério"
+    )
+// Limiares (10% / 25%) são um julgamento de apresentação, não um teste
+// estatístico — documentado como tal em docs/POWERBI_PAGES.md.

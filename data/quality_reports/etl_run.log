@@ -1,0 +1,714 @@
+2026-08-16 19:26:58,772 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:58,781 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:58,800 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:58,800 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:58,800 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:58,800 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:58,801 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:58,801 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:58,801 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:58,801 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:58,814 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:58,817 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:58,830 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:58,830 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:58,830 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:58,830 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:58,830 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:58,830 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:58,830 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:58,830 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:58,843 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:58,847 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:58,862 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:58,862 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:58,862 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:58,862 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:58,862 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:58,862 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:58,862 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:58,863 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:58,874 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:58,885 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 19:26:58,888 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:58,902 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:58,902 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:58,902 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:58,902 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:58,903 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:58,903 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:58,903 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:58,903 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:58,949 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 19:26:58,966 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:58,974 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 19:26:58,976 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:58,992 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:58,992 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:58,992 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:58,992 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:58,992 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:58,992 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:58,992 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:58,992 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:59,031 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 19:26:59,046 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:59,054 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 19:26:59,057 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:59,073 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:59,074 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:59,074 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:59,074 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:59,074 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:59,074 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:59,074 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:59,074 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:59,112 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 19:26:59,136 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:59,143 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 19:26:59,146 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:59,157 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:59,158 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:59,158 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:59,158 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:59,158 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:59,158 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:59,158 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:59,158 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:59,190 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 19:26:59,202 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:59,208 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 19:26:59,210 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:59,224 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:59,225 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:59,225 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:59,225 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:59,225 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:59,225 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:59,225 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:59,225 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:59,257 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 19:26:59,266 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:59,272 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 19:26:59,274 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:59,287 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:59,288 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:59,288 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:59,288 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:59,288 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:59,288 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:59,288 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:59,288 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:59,323 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 19:26:59,333 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:59,338 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 19:26:59,341 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:59,357 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:59,357 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:59,357 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:59,357 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:59,357 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:59,357 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:59,357 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:59,358 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:59,387 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 19:26:59,406 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:59,412 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 19:26:59,416 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:59,432 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:59,432 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:59,432 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:59,432 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:59,432 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:59,432 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:59,432 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:59,432 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:59,478 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 19:26:59,495 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:59,505 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 19:26:59,510 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:59,533 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:59,533 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:59,533 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:59,533 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:59,533 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:59,533 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:59,534 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:59,534 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:59,577 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 19:26:59,709 | INFO    | src.validation.reconciliation | RECONCILIAÇÃO: todos os 31 eventos com status PASS (RAW == STAGING == FACT)
+2026-08-16 19:26:59,721 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:59,729 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 19:26:59,732 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 19:26:59,745 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 19:26:59,745 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 19:26:59,745 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:26:59,745 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 19:26:59,745 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 19:26:59,745 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 19:26:59,745 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 19:26:59,746 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:26:59,781 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 19:26:59,913 | INFO    | src.validation.reconciliation | RECONCILIAÇÃO: todos os 31 eventos com status PASS (RAW == STAGING == FACT)
+2026-08-16 19:26:59,923 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:59,935 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:59,945 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:26:59,959 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:27:10,965 | INFO    | __main__ | ================================================================================
+2026-08-16 19:27:10,965 | INFO    | __main__ | ATLAS ETL — Fase 1 — início da execução
+2026-08-16 19:27:10,965 | INFO    | __main__ | ================================================================================
+2026-08-16 19:27:10,965 | INFO    | src.ingestion.load_raw | Carregando RAW 2024: BancoVDE 2024.xlsx
+2026-08-16 19:29:35,209 | INFO    | src.ingestion.load_raw | RAW 2024 carregado em 144.2s — 764,788 linhas, 14 colunas
+2026-08-16 19:29:35,213 | INFO    | src.ingestion.load_raw | Carregando RAW 2025: BancoVDE 2025.xlsx
+2026-08-16 19:30:55,666 | INFO    | src.ingestion.load_raw | RAW 2025 carregado em 80.5s — 832,285 linhas, 14 colunas
+2026-08-16 19:30:55,666 | INFO    | src.ingestion.load_raw | Carregando RAW 2026: BancoVDE 2026.xlsx
+2026-08-16 19:31:33,810 | INFO    | src.ingestion.load_raw | RAW 2026 carregado em 38.1s — 398,985 linhas, 14 colunas
+2026-08-16 19:31:34,380 | INFO    | src.transformation.staging | STAGING construído: 1,996,058 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 19:31:39,519 | INFO    | src.transformation.fact | Agregação por grão real: 1,996,058 linhas STAGING -> 1,984,506 linhas de grão único (11,552 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 19:31:39,601 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2026]
+2026-08-16 19:31:39,918 | INFO    | src.transformation.dimensions | dim_tempo: 30 linhas
+2026-08-16 19:31:39,918 | INFO    | src.transformation.dimensions | dim_localidade: 5597 linhas
+2026-08-16 19:31:39,918 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 19:31:39,918 | INFO    | src.transformation.dimensions | dim_abrangencia: 3 linhas
+2026-08-16 19:31:39,918 | INFO    | src.transformation.dimensions | dim_agente: 9 linhas
+2026-08-16 19:31:39,918 | INFO    | src.transformation.dimensions | dim_arma: 9 linhas
+2026-08-16 19:31:39,918 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 3 linhas
+2026-08-16 19:31:39,918 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 19:31:45,061 | INFO    | src.transformation.fact | fact_indicadores construída: 5,291,040 linhas
+2026-08-16 19:31:52,160 | INFO    | src.validation.data_quality | DQ CHECK [PASS] STAGING preserva 100% das linhas do RAW — RAW=1,996,058 STAGING=1,996,058
+2026-08-16 19:31:52,161 | INFO    | src.validation.data_quality | DQ CHECK [PASS] Duplicidade no grão final da fact_indicadores — 0 linhas com chave de grão duplicada (esperado: 0)
+2026-08-16 19:31:52,161 | INFO    | src.validation.data_quality | DQ CHECK [PASS] Valores negativos em `valor` — 0 linhas com valor negativo (esperado: 0)
+2026-08-16 19:31:52,161 | INFO    | src.validation.data_quality | DQ CHECK [PASS] Campos obrigatórios sem nulos (tempo/localidade/indicador/abrangencia/valor) — nulos por campo: {'tempo_id': 0, 'localidade_id': 0, 'indicador_id': 0, 'abrangencia_id': 0, 'valor': 0}
+2026-08-16 19:31:52,161 | INFO    | src.validation.data_quality | DQ CHECK [PASS] Consistência de sexo (vitima sempre tem sexo_id; contagem/peso nunca têm) — linhas 'vitima' sem sexo_id: 0 (esperado 0); linhas não-'vitima' com sexo_id: 0 (esperado 0)
+2026-08-16 19:31:52,161 | INFO    | src.validation.data_quality | DQ CHECK [PASS] Cada indicador pertence a exatamente uma família de medida na fact table — nenhuma mistura encontrada
+2026-08-16 19:31:52,161 | INFO    | src.validation.data_quality | DQ CHECK [PASS] Toda linha de dim_indicador tem `unidade` preenchida — 0 linha(s) de dim_indicador sem unidade definida
+2026-08-16 19:31:52,161 | INFO    | src.validation.data_quality | DQ CHECK [PASS] Consistência temporal (meses contínuos por ano, flag is_partial_year correta) — ok
+2026-08-16 19:31:52,167 | INFO    | src.validation.data_quality | Relatório de qualidade salvo em C:\Users\WM INFO\Documents\GitHub\ATLAS — Public Safety Analytics Platform\data\quality_reports\DATA_QUALITY_REPORT.md
+2026-08-16 19:31:55,404 | INFO    | src.validation.reconciliation | RECONCILIAÇÃO: todos os 31 eventos com status PASS (RAW == STAGING == FACT)
+2026-08-16 19:31:55,407 | INFO    | src.validation.reconciliation | Relatório de reconciliação salvo em C:\Users\WM INFO\Documents\GitHub\ATLAS — Public Safety Analytics Platform\docs\ETL_RECONCILIATION.md
+2026-08-16 19:31:56,155 | ERROR   | __main__ | Carga no PostgreSQL falhou (pipeline de arquivos Parquet segue válido): 'utf-8' codec can't decode byte 0xe7 in position 78: invalid continuation byte
+2026-08-16 19:31:56,156 | INFO    | __main__ | ================================================================================
+2026-08-16 19:31:56,156 | INFO    | __main__ | ATLAS ETL — Fase 1 — concluído em 4.8 min
+2026-08-16 19:31:56,156 | INFO    | __main__ | Checks de qualidade: 8/8 PASS
+2026-08-16 19:31:56,156 | INFO    | __main__ | Reconciliação: 31/31 PASS
+2026-08-16 19:31:56,157 | INFO    | __main__ | PostgreSQL: FALHOU: 'utf-8' codec can't decode byte 0xe7 in position 78: invalid continuation byte
+2026-08-16 19:31:56,157 | INFO    | __main__ | ================================================================================
+2026-08-16 19:37:54,477 | INFO    | load_postgres_only | Carregado do parquet: stg=1,996,058 fact=5,291,040
+2026-08-16 19:37:54,501 | INFO    | src.loading.postgres_loader | Executando DDL: sql\staging\001_create_stg_sinesp.sql
+2026-08-16 19:37:54,520 | INFO    | src.loading.postgres_loader | Executando DDL: sql\dimensions\001_create_dimensions.sql
+2026-08-16 19:37:54,584 | INFO    | src.loading.postgres_loader | Executando DDL: sql\facts\001_create_fact_indicadores.sql
+2026-08-16 19:38:22,067 | INFO    | src.loading.postgres_loader | COPY concluído: 1,996,058 linhas -> stg_sinesp
+2026-08-16 19:38:22,134 | INFO    | src.loading.postgres_loader | COPY concluído: 30 linhas -> dim_tempo
+2026-08-16 19:38:22,198 | INFO    | src.loading.postgres_loader | COPY concluído: 5,597 linhas -> dim_localidade
+2026-08-16 19:38:22,203 | INFO    | src.loading.postgres_loader | COPY concluído: 31 linhas -> dim_indicador
+2026-08-16 19:38:22,207 | INFO    | src.loading.postgres_loader | COPY concluído: 3 linhas -> dim_abrangencia
+2026-08-16 19:38:22,211 | INFO    | src.loading.postgres_loader | COPY concluído: 9 linhas -> dim_agente
+2026-08-16 19:38:22,216 | INFO    | src.loading.postgres_loader | COPY concluído: 9 linhas -> dim_arma
+2026-08-16 19:38:22,253 | INFO    | src.loading.postgres_loader | COPY concluído: 3 linhas -> dim_faixa_etaria
+2026-08-16 19:38:22,257 | INFO    | src.loading.postgres_loader | COPY concluído: 3 linhas -> dim_sexo
+2026-08-16 19:40:59,291 | INFO    | load_postgres_only | Carregado do parquet: stg=1,996,058 fact=5,291,040
+2026-08-16 19:40:59,320 | INFO    | src.loading.postgres_loader | Executando DDL: sql\staging\001_create_stg_sinesp.sql
+2026-08-16 19:40:59,371 | INFO    | src.loading.postgres_loader | Executando DDL: sql\dimensions\001_create_dimensions.sql
+2026-08-16 19:50:00,853 | INFO    | load_postgres_only | Carregado do parquet: stg=1,996,058 fact=5,291,040
+2026-08-16 19:50:00,869 | INFO    | src.loading.postgres_loader | Executando DDL: sql\staging\001_create_stg_sinesp.sql
+2026-08-16 19:50:00,893 | INFO    | src.loading.postgres_loader | Executando DDL: sql\dimensions\001_create_dimensions.sql
+2026-08-16 19:50:03,011 | INFO    | src.loading.postgres_loader | Executando DDL: sql\facts\001_create_fact_indicadores.sql
+2026-08-16 19:50:28,724 | INFO    | src.loading.postgres_loader | COPY concluído: 1,996,058 linhas -> stg_sinesp
+2026-08-16 19:50:28,790 | INFO    | src.loading.postgres_loader | COPY concluído: 30 linhas -> dim_tempo
+2026-08-16 19:50:28,850 | INFO    | src.loading.postgres_loader | COPY concluído: 5,597 linhas -> dim_localidade
+2026-08-16 19:50:28,856 | INFO    | src.loading.postgres_loader | COPY concluído: 31 linhas -> dim_indicador
+2026-08-16 19:50:28,860 | INFO    | src.loading.postgres_loader | COPY concluído: 3 linhas -> dim_abrangencia
+2026-08-16 19:50:28,864 | INFO    | src.loading.postgres_loader | COPY concluído: 9 linhas -> dim_agente
+2026-08-16 19:50:28,867 | INFO    | src.loading.postgres_loader | COPY concluído: 9 linhas -> dim_arma
+2026-08-16 19:50:28,872 | INFO    | src.loading.postgres_loader | COPY concluído: 3 linhas -> dim_faixa_etaria
+2026-08-16 19:50:28,876 | INFO    | src.loading.postgres_loader | COPY concluído: 3 linhas -> dim_sexo
+2026-08-16 20:00:56,136 | INFO    | src.loading.postgres_loader | COPY concluído: 5,291,040 linhas -> fact_indicadores
+2026-08-16 20:00:56,188 | INFO    | load_postgres_only | Carga no PostgreSQL concluída com sucesso.
+2026-08-16 20:15:36,245 | INFO    | __main__ | Aplicando sql\analytics\001_schema_and_core_view.sql
+2026-08-16 20:15:36,282 | INFO    | __main__ | Aplicando sql\analytics\002_visoes_dimensionais.sql
+2026-08-16 20:15:36,304 | INFO    | __main__ | Aplicando sql\analytics\003_visoes_temporais.sql
+2026-08-16 20:15:36,314 | INFO    | __main__ | Aplicando sql\analytics\004_rankings.sql
+2026-08-16 20:15:36,320 | INFO    | __main__ | Aplicando sql\analytics\005_pesos_outliers.sql
+2026-08-16 20:15:36,327 | INFO    | __main__ | Camada analítica aplicada: 5 arquivo(s) SQL executado(s).
+2026-08-16 20:21:09,114 | INFO    | __main__ | Aplicando sql\analytics\001_schema_and_core_view.sql
+2026-08-16 20:21:09,169 | INFO    | __main__ | Aplicando sql\analytics\002_visoes_dimensionais.sql
+2026-08-16 20:21:09,192 | INFO    | __main__ | Aplicando sql\analytics\003_visoes_temporais.sql
+2026-08-16 20:21:09,202 | INFO    | __main__ | Aplicando sql\analytics\004_rankings.sql
+2026-08-16 20:21:09,211 | INFO    | __main__ | Aplicando sql\analytics\005_pesos_outliers.sql
+2026-08-16 20:21:09,221 | INFO    | __main__ | Camada analítica aplicada: 5 arquivo(s) SQL executado(s).
+2026-08-16 20:23:23,073 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,080 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,107 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,107 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,107 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,107 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,107 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,107 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,107 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,107 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,119 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,121 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,131 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,133 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,133 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,133 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,133 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,133 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,133 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,133 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,147 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,147 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,159 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,159 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,159 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,159 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,159 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,159 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,159 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,159 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,159 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,171 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:23:23,171 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,189 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,189 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,189 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,189 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,189 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,189 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,189 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,189 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,228 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:23:23,241 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,247 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:23:23,248 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,250 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,250 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,250 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,250 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,250 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,250 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,250 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,250 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,280 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:23:23,288 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,288 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:23:23,288 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,305 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,305 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,305 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,305 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,305 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,305 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,305 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,305 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,323 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:23:23,339 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,339 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:23:23,354 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,359 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,359 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,359 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,359 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,359 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,359 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,359 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,359 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,377 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:23:23,394 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,394 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:23:23,402 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,408 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,408 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,408 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,408 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,408 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,408 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,408 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,408 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,424 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:23:23,441 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,441 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:23:23,441 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,451 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,451 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,451 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,451 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,451 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,451 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,451 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,451 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,483 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:23:23,488 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,488 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:23:23,488 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,499 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,499 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,499 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,499 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,499 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,499 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,499 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,499 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,529 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:23:23,536 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,541 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:23:23,541 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,554 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,554 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,554 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,554 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,554 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,554 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,554 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,554 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,572 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:23:23,584 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,592 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:23:23,592 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,592 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,592 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,592 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,592 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,592 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,592 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,592 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,592 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,618 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:23:23,717 | INFO    | src.validation.reconciliation | RECONCILIAÇÃO: todos os 31 eventos com status PASS (RAW == STAGING == FACT)
+2026-08-16 20:23:23,717 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,717 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:23:23,717 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:23:23,733 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:23:23,741 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:23:23,741 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:23:23,741 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:23:23,741 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:23:23,741 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:23:23,741 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:23:23,741 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:23:23,759 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:23:23,844 | INFO    | src.validation.reconciliation | RECONCILIAÇÃO: todos os 31 eventos com status PASS (RAW == STAGING == FACT)
+2026-08-16 20:23:23,849 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,860 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,868 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:23:23,878 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:37:14,883 | INFO    | __main__ | Aplicando sql\analytics\001_schema_and_core_view.sql
+2026-08-16 20:37:14,930 | INFO    | __main__ | Aplicando sql\analytics\002_visoes_dimensionais.sql
+2026-08-16 20:37:14,979 | INFO    | __main__ | Aplicando sql\analytics\003_visoes_temporais.sql
+2026-08-16 20:37:14,996 | INFO    | __main__ | Aplicando sql\analytics\004_rankings.sql
+2026-08-16 20:37:15,008 | INFO    | __main__ | Aplicando sql\analytics\005_pesos_outliers.sql
+2026-08-16 20:37:15,014 | INFO    | __main__ | Aplicando sql\analytics\006_powerbi_dim_indicador.sql
+2026-08-16 20:37:15,014 | INFO    | __main__ | Aplicando sql\analytics\007_data_quality_views.sql
+2026-08-16 20:37:15,026 | INFO    | __main__ | Camada analítica aplicada: 7 arquivo(s) SQL executado(s).
+2026-08-16 20:38:53,462 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:53,472 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:53,494 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:53,494 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:53,494 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:53,495 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:53,495 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:53,495 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:53,497 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:53,497 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:53,506 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:53,509 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:53,518 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:53,519 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:53,519 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:53,519 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:53,519 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:53,519 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:53,519 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:53,519 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:53,533 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:53,537 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:53,547 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:53,547 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:53,547 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:53,547 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:53,547 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:53,547 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:53,547 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:53,547 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:53,556 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:53,568 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:38:53,570 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:53,579 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:53,580 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:53,580 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:53,580 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:53,580 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:53,580 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:53,580 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:53,580 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:53,621 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:38:53,632 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:53,638 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:38:53,640 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:53,648 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:53,648 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:53,648 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:53,648 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:53,648 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:53,650 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:53,650 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:53,650 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:53,672 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:38:53,683 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:53,687 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:38:53,689 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:53,701 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:53,701 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:53,701 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:53,701 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:53,701 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:53,701 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:53,701 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:53,701 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:53,730 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:38:53,751 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:53,757 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:38:53,760 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:53,779 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:53,779 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:53,779 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:53,779 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:53,779 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:53,779 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:53,779 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:53,780 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:53,818 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:38:53,831 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:53,836 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:38:53,838 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:53,848 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:53,848 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:53,849 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:53,849 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:53,849 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:53,849 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:53,849 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:53,849 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:53,879 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:38:53,888 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:53,893 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:38:53,896 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:53,908 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:53,908 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:53,909 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:53,909 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:53,909 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:53,909 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:53,909 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:53,909 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:53,941 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:38:53,951 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:53,956 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:38:53,959 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:53,974 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:53,975 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:53,975 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:53,975 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:53,975 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:53,975 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:53,975 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:53,975 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:54,003 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:38:54,018 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:54,022 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:38:54,025 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:54,036 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:54,037 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:54,037 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:54,037 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:54,037 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:54,037 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:54,037 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:54,037 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:54,063 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:38:54,073 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:54,078 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:38:54,079 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:54,089 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:54,090 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:54,090 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:54,090 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:54,090 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:54,090 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:54,090 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:54,090 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:54,114 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:38:54,231 | INFO    | src.validation.reconciliation | RECONCILIAÇÃO: todos os 31 eventos com status PASS (RAW == STAGING == FACT)
+2026-08-16 20:38:54,244 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:54,275 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:38:54,278 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:38:54,288 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:38:54,288 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:38:54,289 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:38:54,289 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:38:54,289 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:38:54,289 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:38:54,289 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:38:54,289 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:38:54,315 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:38:54,427 | INFO    | src.validation.reconciliation | RECONCILIAÇÃO: todos os 31 eventos com status PASS (RAW == STAGING == FACT)
+2026-08-16 20:38:54,437 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:54,454 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:54,470 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:38:54,486 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,156 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,167 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:14,202 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:14,203 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:14,203 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:14,204 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:14,204 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:14,204 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:14,204 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:14,205 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:14,222 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,226 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:14,249 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:14,249 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:14,249 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:14,249 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:14,249 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:14,250 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:14,250 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:14,250 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:14,274 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,278 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:14,291 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:14,291 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:14,291 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:14,291 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:14,291 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:14,291 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:14,291 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:14,291 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:14,304 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,323 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:47:14,327 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:14,346 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:14,346 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:14,346 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:14,346 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:14,346 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:14,346 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:14,346 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:14,346 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:14,403 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:47:14,419 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,426 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:47:14,430 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:14,445 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:14,446 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:14,446 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:14,446 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:14,446 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:14,446 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:14,446 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:14,446 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:14,488 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:47:14,504 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,512 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:47:14,515 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:14,527 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:14,528 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:14,528 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:14,528 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:14,528 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:14,528 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:14,528 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:14,528 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:14,565 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:47:14,592 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,598 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:47:14,601 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:14,618 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:14,618 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:14,618 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:14,618 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:14,618 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:14,619 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:14,619 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:14,619 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:14,658 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:47:14,672 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,679 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:47:14,681 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:14,694 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:14,694 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:14,695 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:14,695 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:14,695 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:14,695 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:14,696 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:14,696 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:14,727 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:47:14,739 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,749 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:47:14,752 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:14,765 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:14,765 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:14,765 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:14,765 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:14,765 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:14,765 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:14,766 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:14,766 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:14,798 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:47:14,807 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,814 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:47:14,816 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:14,829 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:14,829 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:14,829 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:14,829 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:14,829 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:14,829 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:14,829 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:14,829 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:14,861 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:47:14,873 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,879 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:47:14,881 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:14,896 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:14,897 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:14,897 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:14,897 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:14,897 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:14,897 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:14,897 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:14,897 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:14,928 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:47:14,938 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:14,944 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:47:14,946 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:14,958 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:14,958 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:14,958 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:14,958 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:14,958 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:14,958 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:14,958 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:14,958 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:14,986 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:47:15,133 | INFO    | src.validation.reconciliation | RECONCILIAÇÃO: todos os 31 eventos com status PASS (RAW == STAGING == FACT)
+2026-08-16 20:47:15,146 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:15,152 | INFO    | src.transformation.fact | Agregação por grão real: 24 linhas STAGING -> 23 linhas de grão único (1 linhas combinadas por SUM dentro da mesma chave dimensional)
+2026-08-16 20:47:15,154 | INFO    | src.transformation.dimensions | Anos com cobertura parcial (< 12 meses na fonte): [2031]
+2026-08-16 20:47:15,165 | INFO    | src.transformation.dimensions | dim_tempo: 15 linhas
+2026-08-16 20:47:15,165 | INFO    | src.transformation.dimensions | dim_localidade: 3 linhas
+2026-08-16 20:47:15,165 | INFO    | src.transformation.dimensions | dim_indicador: 31 linhas
+2026-08-16 20:47:15,166 | INFO    | src.transformation.dimensions | dim_abrangencia: 1 linhas
+2026-08-16 20:47:15,166 | INFO    | src.transformation.dimensions | dim_agente: 1 linhas
+2026-08-16 20:47:15,166 | INFO    | src.transformation.dimensions | dim_arma: 2 linhas
+2026-08-16 20:47:15,166 | INFO    | src.transformation.dimensions | dim_faixa_etaria: 1 linhas
+2026-08-16 20:47:15,166 | INFO    | src.transformation.dimensions | dim_sexo: 3 linhas
+2026-08-16 20:47:15,205 | INFO    | src.transformation.fact | fact_indicadores construída: 58 linhas
+2026-08-16 20:47:15,334 | INFO    | src.validation.reconciliation | RECONCILIAÇÃO: todos os 31 eventos com status PASS (RAW == STAGING == FACT)
+2026-08-16 20:47:15,345 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:15,359 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:15,371 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas
+2026-08-16 20:47:15,383 | INFO    | src.transformation.staging | STAGING construído: 24 linhas (idêntico ao RAW), 14 colunas

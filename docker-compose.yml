@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: atlas_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-atlas}
+      POSTGRES_USER: ${POSTGRES_USER:-atlas}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-atlas_dev_only}
+      # DEV ONLY: simplifica autenticação local. Nunca usar `trust` fora de um
+      # ambiente de desenvolvimento local.
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      # Porta 5433 (não 5432): a máquina de desenvolvimento tinha uma instância
+      # nativa do PostgreSQL já ocupando 5432 no host — usar 5432 aqui faria
+      # qualquer client conectar silenciosamente no Postgres errado.
+      - "${POSTGRES_PORT:-5433}:5432"
+    command:
+      # work_mem acima do default (4MB): a camada analítica (Fase 2) agrega a
+      # fact_indicadores inteira (5M+ linhas) em algumas views; com 4MB o
+      # planner cai para sort/hash em disco (ex.: vw_nacional caiu de ~13s
+      # para ~0.5s só com isso, medido via EXPLAIN ANALYZE — ver
+      # docs/ANALYTICS_MODEL.md). Ajuste justificado por evidência, não um
+      # palpite — ver seção de performance do documento.
+      - "postgres"
+      - "-c"
+      - "work_mem=128MB"
+    volumes:
+      - atlas_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-atlas} -d ${POSTGRES_DB:-atlas}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  atlas_pgdata:
