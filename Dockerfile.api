@@ -1,0 +1,18 @@
+# ATLAS Analytics API — imagem mínima, só as dependências da API (não do ETL
+# completo: sem pandas/openpyxl aqui, que não são usados pela API).
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir \
+    fastapi>=0.115 "uvicorn[standard]>=0.32" "psycopg[binary]>=3.2" \
+    sqlalchemy>=2.0 python-dotenv>=1.0 pydantic>=2.0
+
+COPY src/api ./src/api
+COPY src/config.py ./src/config.py
+COPY src/__init__.py ./src/__init__.py
+
+EXPOSE 8000
+
+CMD ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000"]

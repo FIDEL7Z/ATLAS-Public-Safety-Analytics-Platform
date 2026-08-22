@@ -5,7 +5,8 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-DAX-F2C811?logo=powerbi&logoColor=black)
-![Tests](https://img.shields.io/badge/tests-33%2F33%20passing-brightgreen)
+![FastAPI](https://img.shields.io/badge/FastAPI-REST%20API-009688?logo=fastapi&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-64%2F64%20passing-brightgreen)
 
 Plataforma de Business Intelligence para análise dos indicadores de segurança pública no Brasil, construída do zero sobre os dados oficiais do **Sinesp VDE** (Sistema Nacional de Informações de Segurança Pública — Visualizador de Dados Estatísticos), do Ministério da Justiça e Segurança Pública.
 
@@ -26,7 +27,8 @@ SQL ANALYTICS  →  BUSINESS INTELLIGENCE  →  DATA VISUALIZATION  →  INSIGHT
 |---|---|---|
 | Ingestão + ETL | Python / Pandas | ✅ 1.996.058 linhas processadas, 31/31 indicadores reconciliados |
 | Data Warehouse | PostgreSQL (Docker) | ✅ fact table em formato longo, 5.291.040 linhas, 8 dimensões |
-| Camada Analítica | SQL (views) | ✅ 25 views analíticas, 13/13 testes de integração |
+| Camada Analítica | SQL (views) | ✅ 25 views analíticas, 15/15 testes de integração |
+| REST API | FastAPI / SQLAlchemy | ✅ 21 endpoints, somente leitura, 31/31 testes |
 | Business Intelligence | Power BI / DAX | 📐 modelo semântico e 43 medidas DAX especificados — construção final pendente (ver [Status](#status-e-próximos-passos)) |
 
 ## Arquitetura
@@ -50,8 +52,11 @@ data/raw/*.xlsx (Sinesp VDE, 3 arquivos: 2024, 2025, 2026)
         ▼   sql/analytics/*.sql
    Camada Analítica — schema `analytics`, 25 views
         │
-        ▼   Import Mode + DAX
-   Power BI — ATLAS Dashboard (6 páginas)
+        ├──▼   Import Mode + DAX
+        │  Power BI — ATLAS Dashboard (6 páginas)
+        │
+        ▼   FastAPI (Router → Service → Repository → SQL)
+   ATLAS Analytics API — REST/JSON, somente leitura, 21 endpoints
 ```
 
 ## Principais achados do projeto
@@ -66,7 +71,7 @@ Alguns resultados que só apareceram por validar cada etapa com os dados reais, 
 
 ## Stack
 
-Python · Pandas · NumPy · PostgreSQL · SQL · Power BI · DAX · Docker · pytest · Git
+Python · Pandas · NumPy · PostgreSQL · SQL · FastAPI · SQLAlchemy · Pydantic · Power BI · DAX · Docker · pytest · Git
 
 ## Estrutura do repositório
 
@@ -81,7 +86,12 @@ atlas-public-safety-analytics/
 │   ├── transformation/       # staging, dimensões, fact table
 │   ├── validation/           # data quality + reconciliação
 │   ├── loading/               # carga no PostgreSQL (COPY)
-│   └── analytics/            # aplicação das views SQL analíticas
+│   ├── analytics/            # aplicação das views SQL analíticas
+│   └── api/                  # ATLAS Analytics API (FastAPI) — Fase 5
+│       ├── routers/          # endpoints HTTP
+│       ├── services/         # regras de negócio (404, validação semântica)
+│       ├── repositories/     # SQL parametrizado contra o Postgres
+│       └── schemas/          # modelos Pydantic de request/response
 ├── sql/
 │   ├── staging/               # DDL da staging
 │   ├── dimensions/            # DDL das dimensões
@@ -91,8 +101,9 @@ atlas-public-safety-analytics/
 │   ├── atlas_theme.json       # tema visual, pronto para importar
 │   └── measures.dax           # catálogo de 43 medidas DAX
 ├── docs/                      # documentação completa — ver índice abaixo
-├── tests/                     # 33 testes automatizados (pytest)
-├── docker-compose.yml
+├── tests/                     # 64 testes automatizados (pytest)
+├── docker-compose.yml         # postgres + api
+├── Dockerfile.api
 └── requirements.txt
 ```
 
@@ -101,11 +112,11 @@ atlas-public-safety-analytics/
 Pré-requisitos: Python 3.11+, Docker Desktop.
 
 ```bash
-# 1. Subir o PostgreSQL
+# 1. Subir o PostgreSQL e a API (build automático da imagem da API)
 cp .env.example .env
 docker compose up -d
 
-# 2. Instalar dependências
+# 2. Instalar dependências (para rodar o ETL/testes fora do Docker)
 pip install -r requirements.txt
 
 # 3. Rodar o ETL completo (RAW → STAGING → FACT → PostgreSQL)
@@ -118,7 +129,22 @@ python -m src.analytics.build_views
 pytest
 ```
 
-O ETL espera os 3 arquivos `BancoVDE <ano>.xlsx` do Sinesp VDE em `data/raw/` (não incluídos no repositório por serem dados de origem externa e volumosos).
+O ETL espera os 3 arquivos `BancoVDE <ano>.xlsx` do Sinesp VDE em `data/raw/` (não incluídos no repositório por serem dados de origem externa e volumosos). O passo 1 já sobe a **ATLAS Analytics API** junto com o Postgres — Swagger em [http://localhost:8000/docs](http://localhost:8000/docs) (ver seção abaixo).
+
+## Analytics API
+
+REST API somente leitura que expõe os indicadores do ATLAS em JSON, para que um frontend (Fase 6) ou qualquer outro consumidor não precise conhecer PostgreSQL, SQL, ou as regras internas de agregação/unidade/ano parcial — tudo isso fica encapsulado no backend.
+
+```
+Router → Service → Repository → SQL (Postgres) → JSON
+```
+
+- **Como rodar:** `docker compose up -d` já sobe `atlas_api` junto com `atlas_postgres` (build automático a partir de `Dockerfile.api`). Para rodar fora do Docker: `uvicorn src.api.main:app --reload --port 8000` (usa as credenciais `POSTGRES_*` do `.env` local, porta 5433).
+- **Swagger:** [http://localhost:8000/docs](http://localhost:8000/docs) · **ReDoc:** `/redoc`
+- **Endpoints:** `/api/v1/health`, `/indicators`, `/kpis`, `/temporal` (+ `/yoy`), `/geography/uf` (+ `/municipalities`), `/rankings/uf` (+ `/municipalities`, `/indicators`), `/radar`, `/metadata` (+ `/ufs`, `/years`, `/abrangencias`, `/municipalities`) — contrato completo com exemplos em [`docs/API.md`](docs/API.md).
+- **Configuração:** variáveis de ambiente em `.env` (`POSTGRES_*` reaproveitadas do ETL, mais `API_HOST`, `API_PORT`, `CORS_ORIGINS` novas desta fase) — nunca hardcoded, nunca commitadas.
+- **Testes:** `pytest tests/test_api.py` (31 testes de integração contra o Postgres real).
+- **Regra de unidade:** nenhum endpoint soma indicadores de família/unidade diferentes (pessoas + ocorrências + kg) — a única exceção deliberada é `/radar`, onde `z_score` é um valor padronizado, legitimamente comparável entre indicadores.
 
 ## Documentação
 
@@ -138,6 +164,7 @@ Cada fase foi documentada e validada antes da seguinte começar — a ordem abai
 | [`docs/POWERBI_BUILD_GUIDE.md`](docs/POWERBI_BUILD_GUIDE.md) | Passo a passo para montar o `.pbix` |
 | [`docs/POWERBI_VALIDATION.md`](docs/POWERBI_VALIDATION.md) | Tabela de validação PostgreSQL vs. Power BI |
 | [`docs/POWERBI_REFRESH_GUIDE.md`](docs/POWERBI_REFRESH_GUIDE.md) | Como atualizar o dashboard com novos dados |
+| [`docs/API.md`](docs/API.md) | Contrato completo da Analytics API — todos os endpoints, parâmetros e exemplos (Fase 5) |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Visão consolidada de toda a arquitetura |
 
 ## Princípios que atravessam todo o projeto
@@ -150,7 +177,7 @@ Cada fase foi documentada e validada antes da seguinte começar — a ordem abai
 
 ## Status e próximos passos
 
-O pipeline de dados (Fases 1 e 2) está completo, testado e rodando: PostgreSQL carregado, camada analítica validada, 33 testes automatizados passando. A Fase 3 entregou o modelo semântico, o catálogo de medidas DAX e a especificação completa das páginas — a montagem final do arquivo `.pbix` no Power BI Desktop é o próximo passo, seguindo [`docs/POWERBI_BUILD_GUIDE.md`](docs/POWERBI_BUILD_GUIDE.md).
+O pipeline de dados (Fases 1 e 2) e a Analytics API (Fase 5) estão completos, testados e rodando: PostgreSQL carregado, camada analítica validada, API REST em produção local via Docker — **64 testes automatizados passando** (33 ETL/Analytics + 31 API). A Fase 3 entregou o modelo semântico, o catálogo de medidas DAX e a especificação completa das páginas do Power BI — a montagem final do arquivo `.pbix` é o próximo passo manual, seguindo [`docs/POWERBI_BUILD_GUIDE.md`](docs/POWERBI_BUILD_GUIDE.md). A Fase 6 (frontend web consumindo exclusivamente a Analytics API) é o próximo passo de arquitetura.
 
 ## Fonte dos dados
 
