@@ -1,4 +1,4 @@
-# ATLAS
+# Sentinel.io
 ### Public Safety Analytics Platform
 
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
@@ -10,7 +10,7 @@
 
 Plataforma de Business Intelligence para análise dos indicadores de segurança pública no Brasil, construída do zero sobre os dados oficiais do **Sinesp VDE** (Sistema Nacional de Informações de Segurança Pública — Visualizador de Dados Estatísticos), do Ministério da Justiça e Segurança Pública.
 
-> O ATLAS **não é** um produto oficial do Governo Federal. É um projeto independente de portfólio, construído com dados públicos oficiais, para demonstrar um pipeline analítico completo — de dados brutos em Excel a um dashboard de BI — com o rigor técnico esperado de uma posição de Analista de Dados / BI pleno.
+> O Sentinel.io **não é** um produto oficial do Governo Federal. É um projeto independente de portfólio, construído com dados públicos oficiais, para demonstrar um pipeline analítico completo — de dados brutos em Excel a um dashboard de BI — com o rigor técnico esperado de uma posição de Analista de Dados / BI pleno.
 
 ---
 
@@ -53,10 +53,10 @@ data/raw/*.xlsx (Sinesp VDE, 3 arquivos: 2024, 2025, 2026)
    Camada Analítica — schema `analytics`, 25 views
         │
         ├──▼   Import Mode + DAX
-        │  Power BI — ATLAS Dashboard (6 páginas)
+        │  Power BI — Sentinel.io Dashboard (6 páginas)
         │
         ▼   FastAPI (Router → Service → Repository → SQL)
-   ATLAS Analytics API — REST/JSON, somente leitura, 21 endpoints
+   Sentinel.io Analytics API — REST/JSON, somente leitura, 21 endpoints
 ```
 
 ## Principais achados do projeto
@@ -87,7 +87,7 @@ atlas-public-safety-analytics/
 │   ├── validation/           # data quality + reconciliação
 │   ├── loading/               # carga no PostgreSQL (COPY)
 │   ├── analytics/            # aplicação das views SQL analíticas
-│   └── api/                  # ATLAS Analytics API (FastAPI) — Fase 5
+│   └── api/                  # Sentinel.io Analytics API (FastAPI) — Fase 5
 │       ├── routers/          # endpoints HTTP
 │       ├── services/         # regras de negócio (404, validação semântica)
 │       ├── repositories/     # SQL parametrizado contra o Postgres
@@ -129,11 +129,11 @@ python -m src.analytics.build_views
 pytest
 ```
 
-O ETL espera os 3 arquivos `BancoVDE <ano>.xlsx` do Sinesp VDE em `data/raw/` (não incluídos no repositório por serem dados de origem externa e volumosos). O passo 1 já sobe a **ATLAS Analytics API** junto com o Postgres — Swagger em [http://localhost:8000/docs](http://localhost:8000/docs) (ver seção abaixo).
+O ETL espera os 3 arquivos `BancoVDE <ano>.xlsx` do Sinesp VDE em `data/raw/` (não incluídos no repositório por serem dados de origem externa e volumosos). O passo 1 já sobe a **Sentinel.io Analytics API** junto com o Postgres — Swagger em [http://localhost:8000/docs](http://localhost:8000/docs) (ver seção abaixo).
 
 ## Analytics API
 
-REST API somente leitura que expõe os indicadores do ATLAS em JSON, para que um frontend (Fase 6) ou qualquer outro consumidor não precise conhecer PostgreSQL, SQL, ou as regras internas de agregação/unidade/ano parcial — tudo isso fica encapsulado no backend.
+REST API somente leitura que expõe os indicadores do Sentinel.io em JSON, para que um frontend (Fase 6) ou qualquer outro consumidor não precise conhecer PostgreSQL, SQL, ou as regras internas de agregação/unidade/ano parcial — tudo isso fica encapsulado no backend.
 
 ```
 Router → Service → Repository → SQL (Postgres) → JSON

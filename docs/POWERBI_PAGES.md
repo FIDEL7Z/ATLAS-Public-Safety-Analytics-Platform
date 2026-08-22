@@ -1,6 +1,6 @@
-# ATLAS — Especificação das Páginas
+# Sentinel.io — Especificação das Páginas
 
-Blueprint página a página: o que cada visual mostra, de onde vêm os dados, e por que está desenhado assim. Segue a ordem e o escopo definidos na Fase 3. Todas as páginas usam o tema `powerbi/atlas_theme.json` e o cabeçalho fixo "ATLAS — Public Safety Analytics" (ver `docs/POWERBI_DESIGN_SYSTEM.md`).
+Blueprint página a página: o que cada visual mostra, de onde vêm os dados, e por que está desenhado assim. Segue a ordem e o escopo definidos na Fase 3. Todas as páginas usam o tema `powerbi/atlas_theme.json` e o cabeçalho fixo "Sentinel.io — Public Safety Analytics" (ver `docs/POWERBI_DESIGN_SYSTEM.md`).
 
 ---
 
@@ -96,7 +96,7 @@ Os 4 últimos visuais **não precisam de lógica condicional para existir** — 
 
 ## Página 05 — Analytical Radar
 
-**A página diferencial do ATLAS.** Sem slicer de indicador único obrigatório — z-score é comparável **entre** indicadores de famílias diferentes (é isso que o torna especial: é a única métrica do dashboard que pode legitimamente cruzar unidades, porque compara *desvios padronizados*, não valores brutos).
+**A página diferencial do Sentinel.io.** Sem slicer de indicador único obrigatório — z-score é comparável **entre** indicadores de famílias diferentes (é isso que o torna especial: é a única métrica do dashboard que pode legitimamente cruzar unidades, porque compara *desvios padronizados*, não valores brutos).
 
 | Visual | Fonte | Observação |
 |---|---|---|

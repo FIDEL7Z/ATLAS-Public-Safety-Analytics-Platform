@@ -1,4 +1,4 @@
-# ATLAS — Validação PostgreSQL vs. Power BI
+# Sentinel.io — Validação PostgreSQL vs. Power BI
 
 Regra da Fase 3 (seção 15): nenhuma diferença pode ser ignorada. A coluna **PostgreSQL** abaixo é o valor real, obtido por consulta direta ao banco (não estimado). A coluna **Power BI** deve ser preenchida ao abrir o `.pbix` já construído (colocar o visual/medida correspondente numa página, ler o número, colar aqui) — o **Status** só pode ser PASS se a diferença for zero (ou dentro de arredondamento de exibição, nunca de cálculo).
 

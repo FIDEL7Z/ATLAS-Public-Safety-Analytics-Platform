@@ -1,4 +1,4 @@
-# ATLAS — Catálogo de Medidas DAX
+# Sentinel.io — Catálogo de Medidas DAX
 
 Código completo, pronto para colar no Power BI, em [`powerbi/measures.dax`](../powerbi/measures.dax). Este documento explica o *porquê* de cada grupo — para o *como* (sintaxe exata), usar o `.dax`.
 

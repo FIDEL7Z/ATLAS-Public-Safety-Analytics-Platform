@@ -1,4 +1,4 @@
-# ATLAS — Fase 0.5: Model Validation
+# Sentinel.io — Fase 0.5: Model Validation
 
 **Objetivo:** validar, com base exclusivamente nos 3 arquivos XLSX (carga integral, sem amostragem), se a hipótese de modelagem dimensional inicialmente proposta está correta — antes de escrever qualquer código de ETL.
 
@@ -127,7 +127,7 @@ Confirmado: `total_peso` **nunca** aparece fora desses dois eventos (0 linhas em
 - ✅ Isolamento semântico total — impossível somar entre famílias por engano, pois estão em tabelas diferentes.
 - ✅ Cada fato tem grão limpo, sem esparsidade de colunas.
 - ❌ Multiplica tabelas de fato (3–4), cada uma relacionando-se separadamente com `dim_tempo`/`dim_localidade`/`dim_abrangencia` → modelo mais complexo.
-- ❌ Um visual que precise comparar indicadores de famílias diferentes (ex.: "vítimas de homicídio" ao lado de "armas apreendidas" no mesmo território/mês) exige múltiplas fact tables ativas simultaneamente — limitação conhecida do modelo tabular do Power BI (relacionamento ativo único por par de tabelas; comparações cross-fact pedem medidas com `CROSSFILTER` ou uma dimensão-ponte), aumentando a complexidade de DAX exatamente no cenário executivo que o ATLAS mais precisa (Overview).
+- ❌ Um visual que precise comparar indicadores de famílias diferentes (ex.: "vítimas de homicídio" ao lado de "armas apreendidas" no mesmo território/mês) exige múltiplas fact tables ativas simultaneamente — limitação conhecida do modelo tabular do Power BI (relacionamento ativo único por par de tabelas; comparações cross-fact pedem medidas com `CROSSFILTER` ou uma dimensão-ponte), aumentando a complexidade de DAX exatamente no cenário executivo que o Sentinel.io mais precisa (Overview).
 - ❌ Mais superfície de manutenção: o ETL precisa rotear corretamente cada evento para a fact table certa; um erro de roteamento quebra silenciosamente um KPI.
 
 ### Recomendação: Opção C — uma única fact table, em formato longo (unpivoted), com medida genérica + dimensão semântica obrigatória

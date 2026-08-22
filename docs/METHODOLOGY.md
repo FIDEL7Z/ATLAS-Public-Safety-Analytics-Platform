@@ -1,4 +1,4 @@
-# ATLAS — Metodologia do ETL (Fase 1)
+# Sentinel.io — Metodologia do ETL (Fase 1)
 
 Este documento descreve, camada por camada, as transformações aplicadas pelo pipeline `src/run_etl.py`. As decisões de modelagem aqui implementadas foram validadas na Fase 0.5 (`docs/MODEL_VALIDATION.md`) — este documento explica *como* elas foram implementadas em código, não repete a justificativa (ver o documento de validação para o "porquê").
 

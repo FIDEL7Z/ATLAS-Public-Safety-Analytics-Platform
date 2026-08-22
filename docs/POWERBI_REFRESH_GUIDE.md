@@ -1,4 +1,4 @@
-# ATLAS — Guia de Atualização
+# Sentinel.io — Guia de Atualização
 
 Como atualizar o dashboard quando novos dados do Sinesp VDE chegarem (ex.: um novo `BancoVDE 2027.xlsx`, ou 2026 se tornar um ano completo).
 
@@ -8,7 +8,7 @@ Como atualizar o dashboard quando novos dados do Sinesp VDE chegarem (ex.: um no
 2. Adicionar o ano em `src/config.py` → `RAW_FILES`.
 3. Rodar o ETL completo: `python -m src.run_etl` (Fase 1 — recarrega staging + fact do zero, valida reconciliação, recarrega o PostgreSQL).
 4. Reaplicar a camada analítica: `python -m src.analytics.build_views` (Fase 2/3 — recria as views; idempotente, sempre seguro rodar de novo).
-5. No Power BI Desktop, abrir `powerbi/ATLAS.pbix` → **Página Inicial → Atualizar**. Como o modelo é Import, isso relê todas as tabelas do zero a partir do Postgres já atualizado.
+5. No Power BI Desktop, abrir `powerbi/Sentinel.pbix` → **Página Inicial → Atualizar**. Como o modelo é Import, isso relê todas as tabelas do zero a partir do Postgres já atualizado.
 6. Conferir o card "Cobertura 2026" (ou do novo ano) na Executive Overview — se o ano que antes era parcial virou completo, a flag `is_partial_year` já vem correta do Postgres (calculada automaticamente por `dimensions.py`, nunca hardcoded) — nenhuma medida DAX precisa mudar.
 7. Rodar a suíte de testes (`pytest`) para confirmar que nada quebrou — 31 testes da Fase 1/2 + testes da Fase 3, se adicionados.
 

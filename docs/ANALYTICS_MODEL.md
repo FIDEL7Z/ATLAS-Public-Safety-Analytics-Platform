@@ -1,4 +1,4 @@
-# ATLAS — Fase 2: Analytics Model
+# Sentinel.io — Fase 2: Analytics Model
 
 Camada SQL analítica construída sobre o PostgreSQL já carregado pela Fase 1. O pipeline RAW → STAGING → FACT/DIMENSIONS **não foi alterado** — tudo aqui é aditivo (schema `analytics`, novas views), reversível com um `DROP SCHEMA analytics CASCADE`.
 
@@ -195,7 +195,7 @@ Uma consulta seletiva por filtro único ficou **mais lenta**, não mais rápida:
 
 Motivo: a nova `vw_municipio` agrega **todos** os municípios/indicadores/anos antes de filtrar, porque essa é a estratégia certa para quando a view é lida por inteiro (ver próximo parágrafo) — mas isso significa que uma consulta que só queria uma fatia pequena agora paga o custo da agregação completa mesmo assim.
 
-**Decisão metodológica:** o ATLAS será consumido pelo Power BI em **modo Import** (recomendado para este projeto — dataset de tamanho moderado, atualização em lote, não em tempo real). Em modo Import, o Power BI sempre lê a view **inteira** uma vez por atualização agendada — nunca envia `WHERE` para o Postgres; toda a filtragem interativa do usuário acontece depois, dentro do motor VertiPaq do próprio Power BI. Por isso, otimizar para "ler a view inteira rápido" (o padrão real de uso) foi a escolha certa, mesmo custando uma consulta filtrada ad-hoc via SQL direto. Se o projeto migrar para DirectQuery no futuro, essa decisão precisaria ser revisitada.
+**Decisão metodológica:** o Sentinel.io será consumido pelo Power BI em **modo Import** (recomendado para este projeto — dataset de tamanho moderado, atualização em lote, não em tempo real). Em modo Import, o Power BI sempre lê a view **inteira** uma vez por atualização agendada — nunca envia `WHERE` para o Postgres; toda a filtragem interativa do usuário acontece depois, dentro do motor VertiPaq do próprio Power BI. Por isso, otimizar para "ler a view inteira rápido" (o padrão real de uso) foi a escolha certa, mesmo custando uma consulta filtrada ad-hoc via SQL direto. Se o projeto migrar para DirectQuery no futuro, essa decisão precisaria ser revisitada.
 
 ### Índices: nenhum novo foi criado
 

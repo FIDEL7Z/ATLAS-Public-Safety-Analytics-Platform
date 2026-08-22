@@ -1,4 +1,4 @@
-"""Testes da ATLAS Analytics API (Fase 5) contra o PostgreSQL real.
+"""Testes da Sentinel.io Analytics API (Fase 5) contra o PostgreSQL real.
 
 Mesmo padrão de tests/test_analytics_sql.py: testes de integração, pulados
 automaticamente se o Postgres não estiver acessível.
@@ -265,7 +265,7 @@ def test_swagger_docs_available():
 
 def test_openapi_metadata():
     body = client.get("/openapi.json").json()
-    assert body["info"]["title"] == "ATLAS Analytics API"
+    assert body["info"]["title"] == "Sentinel.io Analytics API"
     assert body["info"]["version"] == "1.0.0"
 
 

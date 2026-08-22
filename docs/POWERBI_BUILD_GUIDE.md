@@ -1,4 +1,4 @@
-# ATLAS — Guia de Construção do Dashboard
+# Sentinel.io — Guia de Construção do Dashboard
 
 Passo a passo para montar o `.pbix` a partir do que já está pronto (PostgreSQL + views + tema + medidas). Estimativa: 2-4 horas para quem já conhece Power BI, seguindo este roteiro.
 
@@ -52,4 +52,4 @@ Seguir `docs/POWERBI_VALIDATION.md` — conferir cada linha da tabela de valida�
 
 ## Passo 9 — Salvar
 
-Salvar como `powerbi/ATLAS.pbix` (fora do controle de versão do Git por padrão — arquivos `.pbix` são binários grandes; se quiser versionar, considerar o formato **Power BI Project (.pbip)**, que salva o modelo/relatório como texto).
+Salvar como `powerbi/Sentinel.pbix` (fora do controle de versão do Git por padrão — arquivos `.pbix` são binários grandes; se quiser versionar, considerar o formato **Power BI Project (.pbip)**, que salva o modelo/relatório como texto).

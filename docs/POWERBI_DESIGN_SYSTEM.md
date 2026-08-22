@@ -1,6 +1,6 @@
-# ATLAS — Design System (Power BI)
+# Sentinel.io — Design System (Power BI)
 
-Identidade visual do dashboard. Paleta derivada e validada segundo a metodologia da skill `dataviz` (checagem de CVD/contraste embutida na ordem dos slots categóricos — ver `references/palette.md` da skill; não foi necessário revalidar porque o ATLAS usa exatamente a ordem padrão já validada para gráficos de barra/linha/pequenos múltiplos, que é o caso de uso do dashboard).
+Identidade visual do dashboard. Paleta derivada e validada segundo a metodologia da skill `dataviz` (checagem de CVD/contraste embutida na ordem dos slots categóricos — ver `references/palette.md` da skill; não foi necessário revalidar porque o Sentinel.io usa exatamente a ordem padrão já validada para gráficos de barra/linha/pequenos múltiplos, que é o caso de uso do dashboard).
 
 Arquivo pronto para importar: [`powerbi/atlas_theme.json`](../powerbi/atlas_theme.json) — no Power BI Desktop: **Exibir → Temas → Procurar temas**.
 
@@ -65,4 +65,4 @@ Segoe UI (padrão do Power BI) em toda a interface — sem fonte decorativa. Nú
 
 ## Nome e identidade do produto
 
-Cabeçalho fixo em todas as páginas: **"ATLAS — Public Safety Analytics"** + subtítulo da página atual. Rodapé: *"Dados: Sinesp VDE / Ministério da Justiça e Segurança Pública. ATLAS é um projeto independente de portfólio — não é um produto oficial do Governo Federal."*
+Cabeçalho fixo em todas as páginas: **"Sentinel.io — Public Safety Analytics"** + subtítulo da página atual. Rodapé: *"Dados: Sinesp VDE / Ministério da Justiça e Segurança Pública. Sentinel.io é um projeto independente de portfólio — não é um produto oficial do Governo Federal."*

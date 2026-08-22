@@ -1,4 +1,4 @@
-"""ATLAS Analytics API — ponto de entrada.
+"""Sentinel.io Analytics API — ponto de entrada.
 
 Uso local: uvicorn src.api.main:app --reload --port 8000
 Swagger:   http://localhost:8000/docs
@@ -19,10 +19,10 @@ logger = logging.getLogger("atlas.api")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)-7s | %(name)s | %(message)s")
 
 app = FastAPI(
-    title="ATLAS Analytics API",
+    title="Sentinel.io Analytics API",
     description=(
         "REST API para consulta dos indicadores analíticos da plataforma "
-        "ATLAS — Public Safety Analytics Platform. Somente leitura: consulta "
+        "Sentinel.io — Public Safety Analytics Platform. Somente leitura: consulta "
         "o Data Warehouse já validado nas Fases 1-2 (PostgreSQL + camada "
         "analítica SQL); nenhuma regra de agregação, unidade ou ano parcial "
         "é recalculada em Python — tudo herdado do banco."

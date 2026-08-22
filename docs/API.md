@@ -1,4 +1,4 @@
-# ATLAS Analytics API — Contrato
+# Sentinel.io Analytics API — Contrato
 
 Documentação completa dos endpoints. A documentação interativa (Swagger) está sempre disponível em `/docs` com o servidor rodando — este documento é a referência estática, versionada junto com o código.
 

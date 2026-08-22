@@ -1,4 +1,4 @@
-# ATLAS — Modelo Semântico Power BI
+# Sentinel.io — Modelo Semântico Power BI
 
 ## 1. Princípio de divisão de responsabilidade
 

@@ -1,4 +1,4 @@
-# ATLAS — Arquitetura Completa
+# Sentinel.io — Arquitetura Completa
 
 ```
 data/raw/*.xlsx (Sinesp VDE, intocado)
@@ -25,7 +25,7 @@ data/raw/*.xlsx (Sinesp VDE, intocado)
    Camada Analítica SQL (rankings, séries temporais, percentis, z-score)
         │
         ▼  Power BI (Import Mode) + DAX (powerbi/measures.dax)
-   ATLAS Dashboard — 6 páginas
+   Sentinel.io Dashboard — 6 páginas
 ```
 
 ## As 3 fases
