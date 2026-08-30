@@ -17,7 +17,7 @@ _SELECT_ABRANGENCIAS = text("SELECT abrangencia FROM dim_abrangencia ORDER BY ab
 
 _SELECT_MUNICIPALITIES = text("""
     SELECT uf, municipio FROM dim_localidade
-    WHERE (CAST(:uf AS CHAR(2)) IS NULL OR uf = :uf)
+    WHERE (CAST(:uf AS VARCHAR) IS NULL OR uf = :uf)
     ORDER BY uf, municipio
 """)
 
