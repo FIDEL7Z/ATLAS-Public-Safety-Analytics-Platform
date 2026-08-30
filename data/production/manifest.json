@@ -1,0 +1,109 @@
+{
+  "dataset": "atlas_public",
+  "phase": "6 — Sentinel Production Dataset",
+  "built_at": "2026-08-30T20:27:49+00:00",
+  "duckdb_engine_version": "1.5.5",
+  "file": {
+    "path": "C:\\Users\\WM INFO\\Documents\\GitHub\\ATLAS — Public Safety Analytics Platform\\data\\production\\atlas_public.duckdb",
+    "size_bytes": 17051648,
+    "size_mb": 17.05
+  },
+  "source_parquets": [
+    {
+      "name": "dim_abrangencia.parquet",
+      "size_bytes": 1917,
+      "sha256": "ceafd0097c1fa42f"
+    },
+    {
+      "name": "dim_agente.parquet",
+      "size_bytes": 1983,
+      "sha256": "fdcc981929a379f4"
+    },
+    {
+      "name": "dim_arma.parquet",
+      "size_bytes": 1876,
+      "sha256": "f17adb38e63007c9"
+    },
+    {
+      "name": "dim_faixa_etaria.parquet",
+      "size_bytes": 1931,
+      "sha256": "5aa7d9bd402e54f4"
+    },
+    {
+      "name": "dim_indicador.parquet",
+      "size_bytes": 4915,
+      "sha256": "926a7fdf7a97a2bf"
+    },
+    {
+      "name": "dim_localidade.parquet",
+      "size_bytes": 93989,
+      "sha256": "47449d885fe706eb"
+    },
+    {
+      "name": "dim_sexo.parquet",
+      "size_bytes": 1767,
+      "sha256": "2eff77e687944690"
+    },
+    {
+      "name": "dim_tempo.parquet",
+      "size_bytes": 5027,
+      "sha256": "faba3263db3a723c"
+    },
+    {
+      "name": "fact_indicadores.parquet",
+      "size_bytes": 1939580,
+      "sha256": "54b144dbdf6484a8"
+    },
+    {
+      "name": "stg_sinesp.parquet",
+      "size_bytes": 1318453,
+      "sha256": "1d4ca400a8344f04"
+    }
+  ],
+  "tables": {
+    "analytics.vw_qualidade_resumo": 1,
+    "dim_abrangencia": 3,
+    "dim_agente": 9,
+    "dim_arma": 9,
+    "dim_faixa_etaria": 3,
+    "dim_indicador": 31,
+    "dim_localidade": 5597,
+    "dim_sexo": 3,
+    "dim_tempo": 30,
+    "fact_indicadores": 5291040
+  },
+  "views": [
+    "analytics._agg_indicador_abrangencia_ano",
+    "analytics._agg_indicador_ano",
+    "analytics._agg_indicador_localidade_ano",
+    "analytics._agg_indicador_tempo",
+    "analytics._dim_ano",
+    "analytics.vw_abrangencia",
+    "analytics.vw_agente",
+    "analytics.vw_arma",
+    "analytics.vw_comparacao_anual_comparavel",
+    "analytics.vw_desvio_media_historica",
+    "analytics.vw_dim_indicador",
+    "analytics.vw_evolucao_temporal",
+    "analytics.vw_evolucao_temporal_metricas",
+    "analytics.vw_faixa_etaria",
+    "analytics.vw_indicador",
+    "analytics.vw_municipio",
+    "analytics.vw_nacional",
+    "analytics.vw_participacao_uf",
+    "analytics.vw_periodo_comparavel",
+    "analytics.vw_ranking_abrangencia",
+    "analytics.vw_ranking_indicador",
+    "analytics.vw_ranking_municipio",
+    "analytics.vw_ranking_regiao",
+    "analytics.vw_ranking_uf",
+    "analytics.vw_sexo",
+    "analytics.vw_uf"
+  ],
+  "notes": [
+    "fact_indicadores no grão completo — nenhuma linha agregada/removida.",
+    "valor: NUMERIC(14,3) do Postgres -> DECIMAL(14,3) no DuckDB (paridade de SUM).",
+    "stg_sinesp NÃO incluída; vw_qualidade_resumo materializada como tabela de 1 linha.",
+    "views vw_fato_enriquecido / vw_pesos_* omitidas (não usadas pela API)."
+  ]
+}

@@ -1,0 +1,29 @@
+# Sentinel.io Analytics API — deploy no Render (Fase 7).
+#
+# Web Service Python puro. Serving read-only sobre data/production/atlas_public.duckdb
+# (versionado no repo). SEM PostgreSQL, SEM Docker, SEM banco externo, SEM cartão.
+# O frontend (Sentinel.io Web) fica na Vercel e consome esta API por HTTPS.
+#
+# Deploy:  Render → New → Blueprint → apontar para este repositório.
+
+services:
+  - type: web
+    name: sentinel-api
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements-api.txt
+    startCommand: uvicorn src.api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/v1/health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: DATABASE_ENGINE
+        value: duckdb
+      - key: DUCKDB_PATH
+        value: data/production/atlas_public.duckdb
+      - key: CORS_ORIGINS
+        # Lista separada por vírgula — NUNCA "*". Ajuste para o domínio real
+        # do Sentinel.io na Vercel quando existir.
+        value: http://localhost:3000,https://sentinel-io.vercel.app

@@ -30,7 +30,7 @@ _SELECT_MUNICIPALITIES_COUNT = text("""
         JOIN dim_tempo t       ON f.tempo_id = t.tempo_id
         JOIN dim_localidade l  ON f.localidade_id = l.localidade_id
         WHERE f.indicador_id = :indicator_id
-          AND (CAST(:uf AS CHAR(2)) IS NULL OR l.uf = :uf)
+          AND (CAST(:uf AS VARCHAR) IS NULL OR l.uf = :uf)
           AND (CAST(:ano AS SMALLINT) IS NULL OR t.ano = :ano)
         GROUP BY l.uf, l.municipio
     ) sub

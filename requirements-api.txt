@@ -1,0 +1,12 @@
+# Dependências de RUNTIME da Sentinel.io Analytics API em produção (Fase 6).
+#
+# Produção roda com DATABASE_ENGINE=duckdb sobre data/production/atlas_public.duckdb
+# — não precisa de pandas / numpy / openpyxl / pyarrow / psycopg. O ETL, a
+# camada analítica e a suíte de testes continuam usando requirements.txt.
+fastapi>=0.115
+uvicorn[standard]>=0.32
+SQLAlchemy>=2.0
+pydantic>=2.0
+python-dotenv>=1.0
+duckdb>=1.1
+duckdb-engine>=0.13

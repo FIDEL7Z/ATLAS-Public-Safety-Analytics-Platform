@@ -4,6 +4,14 @@ data/raw/*
 data/processed/*
 !data/processed/.gitkeep
 
+# Fase 6 — dataset de produção (gerado por src.production.build_dataset).
+# O artefato de serving (~17 MB) É versionado — é o que o deploy no Render
+# publica junto com a API. Rebuild: python -m src.production.build_dataset.
+data/production/*
+!data/production/.gitkeep
+!data/production/atlas_public.duckdb
+!data/production/manifest.json
+
 # Environment
 .env
 venv/
